@@ -1,0 +1,58 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract PropertyPayment {
+
+    struct Transaction {
+        string txnId;
+        address buyer;
+        address seller;
+        uint256 amount;
+        string paymentType;
+        string propertyType;
+        string propertyRef;
+        uint256 txnDate;
+    }
+
+    Transaction[] public transactions;
+
+    event PaymentStored(
+        string txnId,
+        address buyer,
+        address seller,
+        uint256 amount
+    );
+
+    function storePayment(
+        string memory _txnId,
+        address _buyer,
+        address _seller,
+        uint256 _amount,
+        string memory _paymentType,
+        string memory _propertyType,
+        string memory _propertyRef,
+        uint256 _txnDate
+    ) public {
+
+        transactions.push(Transaction(
+            _txnId,
+            _buyer,
+            _seller,
+            _amount,
+            _paymentType,
+            _propertyType,
+            _propertyRef,
+            _txnDate
+        ));
+
+        emit PaymentStored(_txnId, _buyer, _seller, _amount);
+    }
+
+    function getTransaction(uint index) public view returns (Transaction memory) {
+        return transactions[index];
+    }
+
+    function getCount() public view returns (uint) {
+        return transactions.length;
+    }
+}

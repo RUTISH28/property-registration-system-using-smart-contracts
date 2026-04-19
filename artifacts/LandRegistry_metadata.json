@@ -1,0 +1,367 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "string",
+						"name": "documentNo",
+						"type": "string"
+					},
+					{
+						"indexed": true,
+						"internalType": "string",
+						"name": "surveyNo",
+						"type": "string"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "LandRegistered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sellerAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "aadhaar",
+						"type": "string"
+					}
+				],
+				"name": "SellerRegistered",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_area",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_city",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_advance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_imageHash",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_squareFeet",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_documentNo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_surveyNo",
+						"type": "string"
+					}
+				],
+				"name": "addLand",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllLands",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_documentNo",
+						"type": "string"
+					}
+				],
+				"name": "getLand",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "area",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "city",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "advance",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "imageHash",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "squareFeet",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "documentNo",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "surveyNo",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							}
+						],
+						"internalType": "struct LandRegistry.Land",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "landIds",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "lands",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "area",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "city",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "advance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "imageHash",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "squareFeet",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "documentNo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "surveyNo",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_aadhaar",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_mobile",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_addr",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_email",
+						"type": "string"
+					}
+				],
+				"name": "registerSeller",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "sellers",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "aadhaar",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "mobile",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "addr",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"landupload.sol": "LandRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"landupload.sol": {
+			"keccak256": "0x628bb46a72992ef7657fcbcf725cb6d222ff7b679e911b7e9ca2351e49a2109c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cb33f36ca1460da8fccdceeedbb68a9660c017c1f0d42171b73f1d23dbc675e7",
+				"dweb:/ipfs/QmUdDDqxuvufNH5QZsZ2Cx2572erB8aAmMfY591kGa9ywB"
+			]
+		}
+	},
+	"version": 1
+}
